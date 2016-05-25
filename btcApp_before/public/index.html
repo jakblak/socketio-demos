@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+  <body>
+    <div class="container">
+      <div class="header col-md-12">
+        <div class="row bg-primary">
+          <div class="col-md-4">
+            <h1>Market</h1>
+            <h2 id="market"></h2>
+          </div>
+          <div class="col-md-4">
+            <h1>High</h1>
+            <h2 id="high-count"></h2>
+          </div>
+          <div class="col-md-4">
+            <h1>Low</h1>
+            <h2 id="low-count"></h2>
+          </div>
+        </div>
+      </div>
+      <div class="main col-md-12">
+        <div class="row">
+          <div class="col-md-6">
+            <h3 class="text-primary">Recent Trades</h3>
+            <table class="table">
+                <tr>
+                  <th>Buy</th>
+                  <td>
+                  <p id="buy"></p>
+                  </td>
+                  <th>Sell</th>
+                  <td>
+                  <p id="sell"></p>
+                  </td>
+                </tr>
+              </thead>
+            </table>
+          </div>
+          <div class="col-md-6">
+            <h3 class="text-primary">Trade Volume</h3>
+            <table class="table">
+              <tr>
+                <th>Volume</th>
+                  <td>
+                    <p id="volume"></p>
+                </td>
+             </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+  </body>
+</html>

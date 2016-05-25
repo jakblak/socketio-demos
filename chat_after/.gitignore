@@ -1,0 +1,10 @@
+.DS_Store
+dist/
+node_modules/
+bower_components/
+npm-debug.log
+vendor/
+tmp
+.idea
+secrets.js
+error.log

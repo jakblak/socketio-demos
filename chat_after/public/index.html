@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+  <head>
+    <base href="/">
+    <meta charset="utf-8">
+    <title>Socket.io Chat</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body ng-app="app">
+    <div class="header">
+      <div class="navbar navbar-default" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Socket.io Chat</a>
+          </div>
+          <div class="collapse navbar-collapse" id="js-navbar-collapse">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div ng-view></div>
+    </div>
+
+    <!-- Socket.io JS file -->
+    <script src="/socket.io/socket.io.js"></script>
+
+    <!-- Bower Components -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/ng-lodash/build/ng-lodash.min.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/ngstorage/ngStorage.min.js"></script>
+    <script src="bower_components/angular-socket-io/socket.js"></script>
+
+    <!-- JavaScripts -->
+    <script src="app.js"></script>
+    <script src="join/join.Ctrl.js"></script>
+    <script src="main/main.Ctrl.js"></script>
+    <script src="components/socket.Srvc.js"></script>
+  </body>
+</html>

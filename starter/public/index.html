@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+      var socket = io('http://localhost:8080');
+
+        socket.on('message-from-server', function(evt) {
+          document.body.appendChild(
+          document.createTextNode(evt.greeting));
+
+        socket.emit('message-from-client', {
+        greeting: 'Hello from Client'
+      });
+    });
+    </script>
+  </body>
+</html>

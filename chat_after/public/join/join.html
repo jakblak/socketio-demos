@@ -1,0 +1,20 @@
+<div class="row marketing">
+  <div class="col-md-12">
+    <div class="panel panel-default panel-primary" ng-hide="selectedChannel">
+      <div class="panel-heading">
+        <h3 class="panel-title">Join Chat</h3>
+      </div>
+      <form class="panel-body ng-pristine ng-valid" ng-submit="join()">
+        <label>
+          Username
+        </label>
+        <input class="input-lg form-control ng-pristine ng-valid"
+                    maxlength="20"
+                    ng-model="name"
+                    type="text">
+        <br>
+        <input class="btn btn-block btn-primary" type="submit" value="Join">
+      </form>
+    </div>
+  </div>
+</div>
