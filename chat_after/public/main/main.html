@@ -1,7 +1,6 @@
 <div class="jumbotron">
   <h2> Welcome <b>{{mynickname}}</b></h2>,
-  <p>Send messages and likes below
-  [<a href="#/join">Sign Out</a>]
+  <p>Send Messages and Likes below
   </p>
 </div>
 <br>
@@ -26,13 +25,12 @@
   <div class="col-md-2">
     <small class="marker">Likes</small>
     <ul class="list-unstyled">
-      <li ng-repeat='like in likes track by $index'>
+      <li ng-repeat='username in likes track by $index'>
         <span class='label btn-mini label-default userlabel' >
           <i class='fa fa-thumbs-o-up'></i>
-          {{like}}
+          {{username}}
          </span>
          <small class="text-primary">&nbsp; sent like</small>
-<!-- <div class="small">&nbsp; sent like</div> -->
       </li>
     </ul>
   </div>
