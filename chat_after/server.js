@@ -28,6 +28,10 @@ io.on('connection', function(socket) {
     socket.broadcast.emit('message-received', data);
   });
 
+  socket.on('get-users', function(data) {
+    socket.emit('all-users', users);
+  });
+
   socket.on('send-like', function(data) {
     console.log(data);
     console.log(data.like);

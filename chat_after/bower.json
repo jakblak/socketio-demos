@@ -20,6 +20,8 @@
     "angular-socket-io": "~0.7.0",
     "angular-sanitize": "~1.5.3",
     "angular-cookies": "~1.5.3",
-    "font-awesome": "~4.5.0"
+    "font-awesome": "~4.5.0",
+    "ng-lodash": "~0.5.0",
+    "ngstorage": "ng-storage#~0.4.2"
   }
 }
