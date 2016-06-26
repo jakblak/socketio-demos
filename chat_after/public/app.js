@@ -6,7 +6,6 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngStorage',
-    'btford.socket-io',
     'ngLodash'
   ])
   .config(function ($routeProvider, $locationProvider) {

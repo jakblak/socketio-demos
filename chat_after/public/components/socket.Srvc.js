@@ -12,18 +12,7 @@
 
     return {
       on: on,
-      emit: emit,
-      init: init
-    }
-
-    function init() {
-      socket.emit('trigger', function() {
-        console.log('triggered ...');
-        // socket.on('init', function(data) {
-        //   $scope.users = data.users;
-        //   console.log(data.users);
-        // });
-      });
+      emit: emit
     }
 
     function on(eventName, callback) {
