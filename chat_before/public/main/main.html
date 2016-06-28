@@ -1,0 +1,65 @@
+<div class="jumbotron">
+  <h2> Welcome <b>{{mynickname}}</b></h2>,
+  <p>Send Messages and Likes below
+  </p>
+</div>
+<br>
+<div class="row">
+  <div class="col-md-2">
+    <small class="marker">Other Users</small>
+    <ul class="list-unstyled">
+      <li class="user"
+           ng-repeat="user in users track by $index">
+        <span class='label btn-mini label-default userlabel'>
+          <i class='fa fa-user'></i>
+            {{user.nickname}}
+        </span>
+        &nbsp;
+        <a href="#" ng-click="sendLike(user)">
+        <i class="fa fa-thumbs-up"></i>
+        </a>
+        </li>
+      </ul>
+    </div>
+
+  <div class="col-md-2">
+    <small class="marker">Likes</small>
+    <ul class="list-unstyled">
+      <li ng-repeat='username in likes track by $index'>
+        <span class='label btn-mini label-default userlabel' >
+          <i class='fa fa-thumbs-o-up'></i>
+          {{username}}
+         </span>
+         <small class="text-primary">&nbsp; sent like</small>
+      </li>
+    </ul>
+  </div>
+
+  <div class="col-md-8">
+    <form ng-submit='sendMessage()'>
+      <div class='input-group'>
+        <input class='input-sm form-control'
+                    ng-model='message'
+                    type='text'
+                    placeholder="Type a message...">
+        <span class='input-group-btn'>
+          <input class='input-sm btn btn-default'
+          type='submit'
+          value='Send'>
+        </span>
+      </div>
+    </form>
+    <br>
+    <div class='well chatbox' id='chat_history'>
+      <ul class='list-unstyled'>
+        <li ng-repeat='m in messages'>
+          <i class='fa fa-comment'></i>
+          &nbsp;
+          <b>{{m.from}} </b>:
+          &nbsp;
+          {{m.message}}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
