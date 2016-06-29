@@ -8,7 +8,7 @@
   socket.$inject = ['$rootScope'];
 
   function socket($rootScope) {
+    return {}
     // Socket 'on' and 'emit' methods here
-
   };
 })();
