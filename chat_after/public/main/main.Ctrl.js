@@ -8,6 +8,7 @@
   MainCtrl.$inject = ['$scope', '$localStorage', 'socket', 'lodash'];
 
   function MainCtrl($scope, $localStorage, socket, lodash) {
+    $scope.message = '';
     $scope.users = [];
     $scope.messages = [];
     $scope.likes = [];
@@ -19,22 +20,19 @@
     $scope.sendMessage = function(data) {
       var newMessage = {
         message: $scope.message,
-        from: $scope.mynickname
+        from: nickname
       }
       socket.emit('send-message', newMessage);
-      $scope.messages.push(newMessage);
+      // $scope.messages.push(newMessage);
       $scope.message = '';
     };
 
-    $scope.sendLike = function(e) {
-      var toLike = $scope.users.filter(function(f) {
-        if(e.socketid === f.socketid)
-        return f.socketid;
-      });
-      var result = lodash.get(toLike, '[0].socketid');
+    $scope.sendLike = function(user) {
+      console.log(user);
+      var id = lodash.get(user, 'socketid');
       var likeObj = {
-        from: $scope.mynickname,
-        like: result
+        from: nickname,
+        like: id
       }
       socket.emit('send-like', likeObj);
     }

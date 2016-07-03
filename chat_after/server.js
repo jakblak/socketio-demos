@@ -31,7 +31,8 @@ io.on('connection', function(socket) {
 
   // Send a message
   socket.on('send-message', function(data) {
-    socket.broadcast.emit('message-received', data);
+    // socket.broadcast.emit('message-received', data);
+    io.emit('message-received', data);
   });
 
   // Send a 'like' to the user of your choice

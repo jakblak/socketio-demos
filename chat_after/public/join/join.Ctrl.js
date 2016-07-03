@@ -8,9 +8,11 @@
   JoinCtrl.$inject = ['$location', '$scope', '$localStorage', 'socket'];
 
   function JoinCtrl($location, $scope, $localStorage, socket) {
+    $scope.name = '';
+    var nickname;
 
     $scope.join = function() {
-      var nickname = $scope.name;
+      nickname = $scope.name;
       $localStorage.nickname = nickname;
 
       socket.emit('join', {
