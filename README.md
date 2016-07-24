@@ -6,4 +6,5 @@
   - Join and Disconnect Examples
 
 ### Chat Preview
-![Screenshot2](previews/chatting.png)
+![Screenshot2](previews/1.png)
+![Screenshot2](previews/2.png)
