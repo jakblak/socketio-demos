@@ -30,12 +30,13 @@ io.on('connection', function(socket) {
   // When new socket joins
   socket.on('join', function(data) {
     socket.nickname = data.nickname;
-    users[socket.nickname] = socket; 
+    // users[socket.nickname] = socket; 
     var userObj = {
       nickname: data.nickname,
       socketid: socket.id
     }
     users.push(userObj);
+    console.log(users);
     io.emit('all-users', users);
   });
 
