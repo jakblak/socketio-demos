@@ -8,6 +8,8 @@ var port = 8080;
 var users = [];
 
 app.use(express.static(path.join(__dirname, "public")));
+app.use('/bower_components',  express.static(__dirname + '/bower_components'));
+
 
 io.on('connection', function(socket) {
   console.log('new connection made');
